@@ -81,7 +81,6 @@ const Navbar = () => {
           <div className="flex justify-start items-center gap-x-5 child-hover:text-orange-500 child:transition-all">
             <Link to={"/"}>Home</Link>
             <Link to={"/products/all"}>Products</Link>
-            <Link to={"/about"}>About</Link>
           </div>
           <div className="flex justify-end items-center gap-x-5 child-hover:text-orange-500 child:transition-all">
             <Link to={"/whilst"}>
