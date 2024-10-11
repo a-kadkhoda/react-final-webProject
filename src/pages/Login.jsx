@@ -14,6 +14,8 @@ const Login = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     setLocation(pathname);
+    window.scrollTo(0, 0);
+
   }, []);
 
   const onSubmit = (data) => {

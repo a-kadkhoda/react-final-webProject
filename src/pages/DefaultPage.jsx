@@ -8,6 +8,8 @@ const DefaultPage = () => {
 
   useEffect(() => {
     setLocation(pathname);
+    window.scrollTo(0, 0);
+
   }, []);
 
   return (

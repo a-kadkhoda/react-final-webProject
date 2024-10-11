@@ -13,6 +13,7 @@ const Cart = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     if (!isLogin) navigate("/login");
+    window.scrollTo(0, 0);
 
     setLocation(pathname);
   }, []);

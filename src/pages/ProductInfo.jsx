@@ -28,6 +28,8 @@ const ProductInfo = () => {
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
+    window.scrollTo(0, 0);
+
     setLocation(pathname);
     getSingleProduct(param.id, signal).then((data) => {
       if (data) {

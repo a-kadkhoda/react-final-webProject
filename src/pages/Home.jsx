@@ -12,6 +12,8 @@ const Home = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     setLocation(pathname);
+    window.scrollTo(0, 0);
+
   }, []);
 
   const handleNav = (id) => {

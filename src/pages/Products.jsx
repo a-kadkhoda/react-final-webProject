@@ -19,6 +19,8 @@ const Products = () => {
     setLocation(pathname);
     const controller = new AbortController();
     const signal = controller.signal;
+    window.scrollTo(0, 0);
+
     if (pathname === "/products/all") {
       getAllProducts(signal).then((data) => {
         if (data) {

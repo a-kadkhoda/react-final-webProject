@@ -10,6 +10,7 @@ const Whilst = () => {
   const { handleWhilst } = useWhilst();
   const { pathname } = useLocation();
   useEffect(() => {
+    window.scrollTo(0, 0);
     setLocation(pathname);
   }, []);
 
