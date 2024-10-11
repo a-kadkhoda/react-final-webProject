@@ -162,12 +162,12 @@ const Login = () => {
                         required: "Please Confirm Password",
                       })}
                     />
-                  </div>
                   {errors.confirmPassword && (
                     <span className="text-red-600">
                       {errors.confirmPassword.message}
                     </span>
                   )}
+                  </div>
                 </div>
                 <button
                   type="submit"
