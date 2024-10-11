@@ -33,8 +33,17 @@ const useCart = () => {
       },
     });
   };
+  const removeItem =(e,id)=>{
+    e.stopPropagation()
+    cartDispatch({
+      type : "remove",
+      payload : {
+        id:id
+      }
+    })
+  }
 
-  return { addCart, removeCart, handleCart };
+  return { addCart, removeCart, handleCart ,removeItem};
 };
 
 export default useCart;

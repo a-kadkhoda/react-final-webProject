@@ -5,10 +5,12 @@ import { MyContext } from "../context/MyContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import Card from "../components/Card";
 import useWhilst from "../hooks/useWhilst";
+import useCart from "../hooks/useCart";
 
 const Cart = () => {
   const { setLocation, isLogin, products, cart } = useContext(MyContext);
   const { handleWhilst } = useWhilst();
+  const {removeItem} = useCart()
   const navigate = useNavigate();
   const { pathname } = useLocation();
   useEffect(() => {
@@ -34,11 +36,15 @@ const Cart = () => {
               const product = products.find((p) => p.id === cartItem.id);
               return (
                 <div
-                  className="cursor-pointer"
+                  className="cursor-pointer flex flex-col items-center justify-center"
                   key={product.id}
                   onClick={() => handleNav(product.id)}
                 >
                   <Card {...product} onWhilst={handleWhilst} />
+                  <div onClick={(e)=>removeItem(e,product.id)} className="w-[240px] flex justify-center bg-red-500 rounded text-white hover:bg-red-600">
+                    Remove
+                  </div>
+ 
                 </div>
               );
             })}
